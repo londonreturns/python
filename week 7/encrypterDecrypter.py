@@ -41,7 +41,7 @@ def decrypter(file1, converter):
 allLetters = "abcdefghijklmnopqrstuvwxyz"
 encrypterDict = {}
 decrypterDict = {}
-j = 1
+j = 0
 
 while True:
     fileName = input("Enter filename: ")
@@ -50,11 +50,13 @@ while True:
     if shiftnumber > 26:
         shiftnumber %= 26
     for i in range(len(allLetters)):
-        if i < len(allLetters) - shiftnumber:
+        if shiftnumber + i < 26:
             encrypterDict[allLetters[i]] = allLetters[i + shiftnumber]
         else:
             encrypterDict[allLetters[i]] = allLetters[j]
             j += 1
+    print(encrypterDict)
+
 
     for k, v in encrypterDict.items():
         decrypterDict[v] = k
