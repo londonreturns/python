@@ -1,0 +1,4 @@
+ProductID,ProductName,Category,UnitsSold,UnitPrice
+100,Toyota,Car,100,20
+101,Coke,Drink,23,100
+102,Lenovo,Laptop,200,21
